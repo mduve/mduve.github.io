@@ -1,0 +1,227 @@
+@media screen and (min-width: 768px) {
+
+  .page-container {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    display: inline-block;
+    overflow: auto;
+    color: $gray;
+    @include transition();
+    left: 0;
+
+    h3 {
+      margin: 5rem 0 1rem;
+      margin: 0rem 0 1rem;
+      font-size: 1.75rem;
+      // @include textshadow();
+    }
+
+    .about, .work, .contact {
+      min-height: 100%;
+      padding: 2rem;
+    }
+
+    .about {
+      background: $darkbluegray;
+      font-size: 1.25rem;
+      font-size: 1.75rem;
+      h3 {
+        color: $white;
+        font-size: 2.25rem;
+      }
+      color: $white;
+      a {
+          color: $lightturquoise;
+      }
+    }
+    .work {
+      background: $white;
+      color: $lightturquoise;
+      h3 {
+        margin: 0;
+      }
+    }
+    .contact {
+      background: $darkbluegray;
+      color: $white;
+      .button {
+        width: 100%;
+      }
+    }
+ 
+    .ux-proj-detail,
+    .ui-proj-detail {
+      display:none;
+    }
+
+    &.js {
+      overflow: hidden;
+      
+      h2 {
+        display: none;
+      }
+
+      .about, .work, .contact {
+        height:100%;
+        overflow: hidden;
+        transition: all .5s;
+        top:0;
+        position: relative;
+
+      }
+
+      // work out later
+      .detail-container {
+        display:none;
+      }
+
+
+
+      &.about {
+        .about, .work, .contact {
+          top:0;
+        }
+      }
+      &.work {
+        .about, .work, .contact {
+          top:-100%;
+        }
+      }
+      &.contact {
+        .about, .work, .contact {
+          top:-200%;
+        }
+      }
+
+
+      .work {
+        position: relative;
+        left: 0;
+        .design,
+        .develop {
+          display: block;
+          width: 100vw;
+          position: relative;
+          left: -50%;
+          display: flex;
+          flex-direction: row;
+          .inner,
+          .outer {
+            width:50%;
+            @include transition();
+          }
+          &:first-child {
+            flex-direction: row-reverse;
+          }
+        }
+
+        &.design,
+        &.develop {
+          .inner {
+            min-width: 25%;
+            max-width: 25rem;
+            max-width: 13rem;
+            position: relative;
+          }
+          .outer {
+            width: 75%;
+          }
+        }
+
+        .design {
+            background: $lightturquoise;
+            background: linear-gradient(144deg, $lightblue, $lightturquoise 100%);
+            background: linear-gradient(175deg, $lightblue, $lightturquoise 100%);
+            .js-link {color: $white;}
+        }
+
+      }
+
+      #work {
+        padding: 0;
+        display: flex;
+        &.design .develop,
+        &.design .design {
+          left: 0%;
+        }
+        &.develop .develop,
+        &.develop .design {
+          left: -100%;
+        }
+        .design, .develop {
+          // padding: 2rem;
+          min-width: 100%;
+          position: relative;
+          @include transition();
+        }
+      }
+
+      #about, #contact {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        .wrapper {
+          max-width: 45rem;
+          width: 75vw;
+        }
+      }
+    }
+  }
+  .page-container.js .work .develop .outer {
+    position: absolute;
+    right: 0; 
+  }
+  
+  .page-container.js .work .design .outer {
+    position: absolute;
+    left: 0;
+  }  
+}
+
+
+
+
+/*iphone x, pixel 2xl*/
+@media only screen and (min-device-width: 823px) and (max-device-width: 823px) and (orientation: landscape),
+only screen and (min-device-width: 812px) and (max-device-width: 812px) and (orientation: landscape) {
+  .page-container.js #about .wrapper{
+    font-size: 3vw;
+  }
+  .page-container.js #contact .wrapper {
+    font-size: 2vw;
+  }
+
+}
+
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px),
+only screen and (min-device-width: 411px) and (max-device-width: 823px) {
+  .page-container.js #about .wrapper, 
+  .page-container.js #contact .wrapper {
+    max-width: 45rem;
+    width: 70vw;
+  }
+
+
+  #detail header {
+    display: flex;
+    font-size: 1vw;
+    justify-content: space-between;
+    flex-direction: row;
+
+    .design-detail & {
+      flex-direction: row;
+    }
+
+    .develop-detail & {
+      flex-direction: row-reverse;
+    }
+    .container {
+      padding: 1rem;
+    }
+    .button-back {
+      position: relative;
+    }
+  }  
+}

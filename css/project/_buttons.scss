@@ -1,0 +1,66 @@
+.button {
+  padding: .5rem 2rem;
+  border:0;
+  text-decoration: none !important;
+  @include transition();
+
+  &-primary {
+    background-color: $lightturquoise;
+    color: $white;
+    &:hover, &:active {
+      background-color: $lightturquoise;
+    }
+  }
+
+  &-primary-reverse {
+    background-color: transparent;
+    border-color: $lightturquoise;
+    color: $lightturquoise;
+    &:hover, &:active {
+      background-color: transparent;
+    }
+  }  
+
+  &-secondary-reverse {
+    background-color: transparent;
+    border: 1px solid $darkbluegray;
+    color: $darkbluegray;
+    &:hover, &:active {
+      background-color: transparent;
+    }
+  }    
+
+  &-link {
+    color: $navy;
+    padding: 0;
+    margin: 0;
+    border: 0;
+    display: inline;
+    background: none;
+    &:hover {
+      color: $darkbluegray;
+      text-decoration: none;
+      background: none;
+    }
+  }
+  &-default {
+
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .button {
+    padding: 1rem 2rem;
+    &-link {
+      padding: 0;
+    }
+  }
+}
+
+// portrait on mobile
+@media screen and (max-width: 500px) {
+  .button {
+    font-size: 4vw;
+    font-size: inherit;
+  }
+}

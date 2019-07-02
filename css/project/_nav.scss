@@ -1,0 +1,450 @@
+.page-container:not(.js) {
+  nav.menu,
+  nav.mobile-menu {
+    position: fixed !important;
+    top: 0;
+    padding: 2rem;
+    background: $lightbluegray;
+    left: 0 !important;
+    width: 100% !important;
+    .logo {
+      position: absolute;
+      left: 0;
+      padding: 0;
+      margin: 1rem;
+      top: 0rem;
+    }
+    span.menu-wrapper {
+      display: flex;
+      flex-direction: row;
+      position: relative;
+      top: 0;
+      left: 0;
+      height: auto;
+      right: unset;
+      left: unset;
+      justify-content: stretch;
+      width: auto;
+      padding: 0;
+      margin: 0 0 0 2rem;
+      top: 0;
+      flex-wrap: nowrap;
+      background: transparent;
+      a {
+        color: $white !important;
+        font-size: 75%;
+        height: 10px;
+        top: 0;
+        padding: 0;
+        margin: 0 7px 0 0;
+        line-height: 1;
+        background: transparent;
+      }
+    }
+  }
+
+  nav.menu,
+  nav.mobile-menu {
+    position: fixed !important;
+    top: 0;
+    padding: 2rem;
+    background: $lightbluegray;
+    left: 0 !important;
+    width: 100% !important;
+    .logo {
+      position: absolute;
+      left: 0;
+      padding: 0;
+      margin: 1rem;
+      top: 0rem;
+    }
+    span.menu-wrapper {
+      display: flex;
+      flex-direction: row;
+      position: relative;
+      top: 0;
+      left: 0;
+      height: auto;
+      right: unset;
+      left: unset;
+      justify-content: stretch;
+      width: auto;
+      padding: 0;
+      margin: 0 0 0 2rem;
+      top: 0;
+      flex-wrap: nowrap;
+      background: transparent;
+      a {
+        color: $white !important;
+        font-size: 75%;
+        height: 10px;
+        top: 0;
+        padding: 0;
+        margin: 0 7px 0 0;
+        line-height: 1;
+        background: transparent;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .page-container {
+    .menu {
+      display: flex;
+      flex-direction: column;
+      z-index: 999;
+      top:2rem;
+      left: 2rem;
+      position: relative;
+      display: flex;
+      flex-direction: row;
+      z-index: 999;
+      justify-content: center;
+      @include transition();
+      top: 2rem;
+      height:0;
+
+      .logo {
+          text-indent: 1.5em;
+          display: inline-block;
+          width: 3rem;
+          height: 1.5rem;
+          line-height: 1.5rem;
+          background-size: cover;
+          height:3rem;
+          border-radius: 50%;
+          @include boxshadow();
+          @include transition();
+
+          width: 2.5rem;
+          height: 2.5rem;
+          position:absolute;
+          z-index: 99;
+
+          &:hover {cursor: pointer;}
+          img, svg{float:left;}
+      }
+
+      .menu-wrapper {
+        position: fixed;
+        background: rgba(0,0,0,.75);
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        opacity: 0;
+        text-align: center;
+        visibility: collapse;
+        //@include transition();
+        transition: all .15s;
+
+        a {
+          color: white;
+          font-size: 4vw;
+          font-size: 8vw;
+          @include textshadow();
+          &.active {
+            color: $lightturquoise;
+          }
+        }
+      }
+
+    }
+    &.work .work .logo, .work .logo {
+      svg {
+        fill: $lightturquoise;
+      }
+    }
+
+    &.contact .contact .logo, .contact .logo,
+    &.about .about .logo, .about .logo {
+      left: -2rem;
+      top: -2rem;
+    }
+
+    &.work .work.design .logo,
+    &:not(.work) .work.design .logo,
+    &.work .work .logo {
+      top: -2rem;
+      left: -2rem;
+    }
+    &.work .work.develop .logo,
+    &:not(.work) .work.develop .logo {
+      top: -2rem;
+      left: calc(100vw - 2rem)
+    }
+  }
+
+  .menu-active .page-container:not(.about):not(.work):not(.contact) .about .menu-wrapper,
+  .menu-active .page-container.about .about .menu-wrapper,
+  .menu-active .page-container.work .work .menu-wrapper,
+  .menu-active .page-container.contact .contact .menu-wrapper {
+      visibility: visible;
+      opacity: 1;
+
+  }
+}
+
+@media screen and (max-width: 767px) and (orientation: landscape) {
+  .page-container .menu .menu-wrapper a {
+    font-size: 4vw;
+  }
+}
+
+
+
+// desktop
+@media screen and (min-width: 768px) {
+  .logo {
+      text-indent: 1.5em;
+      display: inline-block;
+      width: 3rem;
+      height: 1.5rem;
+      line-height: 1.5rem;
+      background-size: cover;
+      height:3rem;
+      border-radius: 50%;
+      @include boxshadow();
+      img, svg{float:left;}
+  }
+
+  .menu {
+    display: flex;
+    flex-direction: column;
+    z-index: 999;
+    top:2rem;
+    left: 2rem;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    z-index: 999;
+    justify-content: center;
+    @include transition();
+    top: 2rem;
+    height:0;
+  }
+
+  .page-container {
+    .menu .menu-wrapper {
+      position: fixed;
+      background: rgba(0,0,0,.75);
+      width: 100%;
+      height: 100%;
+      left: 0;
+      top: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      opacity: 0;
+      text-align: center;
+      visibility: collapse;
+      //@include transition();
+      transition: all .15s;
+
+      a {
+        color: white;
+        font-size: 4vw;
+        @include textshadow();
+        &.active {
+          color: $lightturquoise !important;
+        }
+      }
+    }
+  }
+
+  .menu-active .page-container.about .about .menu-wrapper,
+  .menu-active .page-container.work .work .menu-wrapper,
+  .menu-active .page-container.contact .contact .menu-wrapper {
+      visibility: visible;
+      opacity: 1;
+
+  }
+
+  // position nav
+  .page-container {
+    &.work {
+      .menu {
+        width: 100%;
+        left: 0;
+      }
+      .work.develop .menu {
+        width: 100%;
+        left: 100%;
+      }
+    }
+
+    .logo svg {
+      fill: $white;
+    }
+
+    .develop .logo svg {
+      fill: $lightturquoise;
+    }
+
+    &.about .about,
+    &.contact .contact,
+    .about, .contact{
+      .menu {
+        width: auto;
+        left: 2rem;
+        position: absolute;
+        // .menu-wrapper {
+        //   display:none !important;
+        // }
+      }
+    }
+  }
+
+  .page-container {
+    .menu .menu-wrapper {
+      /*new */
+      opacity: 1;
+      visibility: inherit;
+      background: transparent;
+      width: 6rem;
+      display: flex;    
+      text-align: left;  
+      align-items: flex-start; 
+      height: auto;
+      margin: 6rem 0 0 calc(50% - 1rem);
+      position: absolute;
+      a {
+        font-size: 1rem;
+        text-shadow: none;
+        
+      } 
+    }
+  }
+  &.work .work .menu .menu-wrapper {
+    display: none;
+  }
+  &.work .work.design .menu .menu-wrapper,
+  &.work .work.develop .menu .menu-wrapper {
+    display: flex;
+  }
+  // &.work .work.design .menu .menu-wrapper a.active {
+  //   color: $darkbluegray !important;
+  //   color: $navy !important;
+  // }
+  &.work .work.develop .menu .menu-wrapper a {
+    color: $lightbluegray;
+  }
+
+}
+
+
+
+
+/*iphone x, pixel 2xl*/
+
+@media only screen and (min-device-width: 823px) and (max-device-width: 823px) and (orientation: landscape),
+only screen and (min-device-width: 812px) and (max-device-width: 812px) and (orientation: landscape) {
+
+  .page-container {
+    .menu {
+      display: flex;
+      flex-direction: column;
+      z-index: 999;
+      top:2rem;
+      left: 2rem;
+      position: relative;
+      display: flex;
+      flex-direction: row;
+      z-index: 999;
+      justify-content: center;
+      @include transition();
+      top: 2rem;
+      height:0;
+
+      .logo {
+          text-indent: 1.5em;
+          display: inline-block;
+          width: 3rem;
+          height: 1.5rem;
+          line-height: 1.5rem;
+          background-size: cover;
+          height:3rem;
+          border-radius: 50%;
+          @include boxshadow();
+          @include transition();
+
+          width: 2.5rem;
+          height: 2.5rem;
+          position:absolute;
+          z-index: 99;
+
+          &:hover {cursor: pointer;}
+          img, svg{float:left;}
+      }
+
+      .menu-wrapper {
+        position: fixed;
+        background: rgba(0,0,0,.75);
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        opacity: 0;
+        text-align: center;
+        visibility: collapse;
+        transition: all .15s;
+        margin: 0;
+
+        a {
+          color: white;
+          font-size: 4vw;
+          @include textshadow();
+          &.active {
+            color: $lightturquoise;
+          }
+        }
+      }
+
+    }
+    &.work .work .logo svg, 
+    .work .logo svg {
+      fill: $white;
+    }
+
+    &.work .work.develop .logo svg {
+      fill: $lightturquoise;
+    }
+
+    &.contact .contact .logo, .contact .logo,
+    &.about .about .logo, .about .logo {
+      left: 0;
+      top: 0;
+    }
+
+    &.work .work.design .logo,
+    &:not(.work) .work.design .logo,
+    &.work .work .logo {
+      left: unset;
+    }
+
+  }
+
+  .menu-active .page-container:not(.about):not(.work):not(.contact) .about .menu-wrapper,
+  .menu-active .page-container.about .about .menu-wrapper,
+  .menu-active .page-container.work .work .menu-wrapper,
+  .menu-active .page-container.contact .contact .menu-wrapper {
+      visibility: visible;
+      opacity: 1;
+
+  } 
+
+  .work .work.develop .menu .menu-wrapper a {
+    color: white;
+  }
+
+}

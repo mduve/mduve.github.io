@@ -1,0 +1,110 @@
+.page-container .work {
+    .work-toggle {
+      display: flex;
+      overflow: hidden;
+      width: 100%;
+      position: relative;
+      @include transition();
+
+      .work-title {
+          position: relative;
+          min-width: 100%;
+          transition: all .25s;
+          display: flex;
+          justify-content: flex-start;
+          position:relative;
+          .js-link {
+            color: $lightturquoise;
+            &:hover {
+              text-decoration: none;
+            }
+
+          }
+      }
+  }
+  .design .work-title {
+      left: 0;
+  }
+  .develop .work-title {
+      left: -100%;
+  }
+  .ux-detail-btn,
+  .ui-detail-btn {
+    position: absolute;
+    bottom: -10px;
+    display:none;
+  }      
+  // &.develop .ux-detail-btn,
+  // &.design .ux-detail-btn,
+  // &.develop .ui-detail-btn,
+  // &.design .ui-detail-btn {
+  //   display:inline;
+  // }
+
+
+
+}
+
+
+@media screen and (min-width: 768px) {
+  /* toggle work navigation component (UX/UI) */
+  .page-container {
+    .work {
+      .work-toggle {
+        top:50%;
+        .work-title {
+          justify-content: center;
+          .js-link {
+            font-size: 18vw;
+            height: 22vw;
+            flex-direction: column;
+            display: flex;
+            align-items: center;
+            line-height: 1;
+            color: $lightturquoise;
+            @include transition();
+            text-decoration: none;
+            span {
+              font-size: 15%;
+              font-weight: 400;
+              position: absolute;
+              bottom: 2vw;
+            }
+          }
+        }
+      }
+    }
+    .work.design,
+    .work.develop {
+      .work-toggle {
+        // top: 60%;
+        .work-title .js-link {
+          font-size: 11vw;
+          height: 14.25vw;
+        }
+      }
+    }
+  }
+
+}
+
+@media screen and (min-width: 1300px) {
+  .page-container {
+    .work .work-toggle .work-title .js-link {
+      font-size: 252px;
+      line-height: .5;
+      height: 248px;
+    }
+    .work.design,
+    .work.develop {
+      .work-toggle {
+        // top: 60%;
+        .work-title .js-link {
+          font-size: 11vw;
+          line-height: 1;
+          height: 14.25vw;
+        }
+      }
+    }
+  }
+}
