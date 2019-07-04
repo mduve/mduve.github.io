@@ -2,7 +2,7 @@
 
     $public_key = "";
     $private_key = "";
-    $url = "";
+    $url = "https://www.google.com/recaptcha/api/siteverify";
 
     if(array_key_exists("submit", $_POST)) {
         //echo "<pre>";print_r($_POST);echo "</pre>";
@@ -16,7 +16,7 @@
         {
             echo "Your information was valid...";
 
-            $mail_to = "mduve2004@yahoo.com";
+            $mail_to = "";
             
             # Sender Data
             $subject = trim($_POST["subject"]);
