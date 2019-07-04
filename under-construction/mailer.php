@@ -1,8 +1,8 @@
 ﻿<?php
 
-    $public_key = "6Lf6CHoUAAAAAEEvZfLRIUXl93mimp1lt5RwNlux";
-    $private_key = "6Lf6CHoUAAAAAJTNgNV_LwVJHu9FdHzBDBLkrGNb";
-    $url = "https://www.google.com/recaptcha/api/siteverify";
+    $public_key = "";
+    $private_key = "";
+    $url = "";
 
     if(array_key_exists("submit", $_POST)) {
         //echo "<pre>";print_r($_POST);echo "</pre>";
