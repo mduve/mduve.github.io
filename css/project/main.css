@@ -4400,7 +4400,7 @@ a.text-dark:hover, a.text-dark:focus {
     justify-content: flex-start;
     position: relative; }
     .page-container .work .work-toggle .work-title .js-link {
-      color: #00ffed; }
+      color: #00D1D6; }
       .page-container .work .work-toggle .work-title .js-link:hover {
         text-decoration: none; }
 
@@ -4429,7 +4429,7 @@ a.text-dark:hover, a.text-dark:focus {
         display: flex;
         align-items: center;
         line-height: 1;
-        color: #00ffed;
+        color: #00D1D6;
         transition: .5s all;
         text-decoration: none; }
         .page-container .work .work-toggle .work-title .js-link span {
@@ -4456,7 +4456,7 @@ a.text-dark:hover, a.text-dark:focus {
 #detail {
   color: white;
   background: #47a3da;
-  background: #00ffed;
+  background: #00D1D6;
   background: #ecf0f1;
   background: #34495e;
   background: #97a8b2;
@@ -4479,7 +4479,7 @@ a.text-dark:hover, a.text-dark:focus {
   #detail a:active {
     color: #00ffed;
     color: #47a3da;
-    color: #00ffed; }
+    color: #00D1D6; }
   #detail > .container {
     margin-bottom: 5rem; }
   #detail header {
@@ -4500,7 +4500,7 @@ a.text-dark:hover, a.text-dark:focus {
       top: 0;
       height: 100%;
       background: #47a3da;
-      background: #00ffed; }
+      background: #00D1D6; }
   .design-detail #detail .button-back {
     right: 0; }
   .develop-detail #detail .button-back {
@@ -4725,14 +4725,14 @@ a.text-dark:hover, a.text-dark:focus {
   text-decoration: none !important;
   transition: .5s all; }
   .button-primary {
-    background-color: #00ffed;
+    background-color: #00D1D6;
     color: #fff; }
     .button-primary:hover, .button-primary:active {
-      background-color: #00ffed; }
+      background-color: #00D1D6; }
   .button-primary-reverse {
     background-color: transparent;
-    border-color: #00ffed;
-    color: #00ffed; }
+    border-color: #00D1D6;
+    color: #00D1D6; }
     .button-primary-reverse:hover, .button-primary-reverse:active {
       background-color: transparent; }
   .button-secondary-reverse {
@@ -4906,9 +4906,9 @@ a.text-dark:hover, a.text-dark:focus {
         font-size: 8vw;
         text-shadow: 1px 1px 1px rgba(150, 150, 150, 0.25); }
         .page-container .menu .menu-wrapper a.active {
-          color: #00ffed; }
+          color: #00D1D6; }
   .page-container.work .work .logo svg, .page-container .work .logo svg {
-    fill: #00ffed; }
+    fill: #00D1D6; }
   .page-container.contact .contact .logo, .page-container .contact .logo,
   .page-container.about .about .logo, .page-container .about .logo {
     left: -2rem;
@@ -4981,7 +4981,7 @@ a.text-dark:hover, a.text-dark:focus {
       font-size: 4vw;
       text-shadow: 1px 1px 1px rgba(150, 150, 150, 0.25); }
       .page-container .menu .menu-wrapper a.active {
-        color: #00ffed !important; }
+        color: #00D1D6 !important; }
   .menu-active .page-container.about .about .menu-wrapper,
   .menu-active .page-container.work .work .menu-wrapper,
   .menu-active .page-container.contact .contact .menu-wrapper {
@@ -4996,7 +4996,7 @@ a.text-dark:hover, a.text-dark:focus {
   .page-container .logo svg {
     fill: #fff; }
   .page-container .develop .logo svg {
-    fill: #00ffed; }
+    fill: #00D1D6; }
   .page-container.about .about .menu,
   .page-container.contact .contact .menu,
   .page-container .about .menu, .page-container .contact .menu {
@@ -5083,11 +5083,11 @@ a.text-dark:hover, a.text-dark:focus {
         font-size: 4vw;
         text-shadow: 1px 1px 1px rgba(150, 150, 150, 0.25); }
         .page-container .menu .menu-wrapper a.active {
-          color: #00ffed; }
+          color: #00D1D6; }
   .page-container.work .work .logo svg, .page-container .work .logo svg {
     fill: #fff; }
   .page-container.work .work.develop .logo svg {
-    fill: #00ffed; }
+    fill: #00D1D6; }
   .page-container.contact .contact .logo, .page-container .contact .logo,
   .page-container.about .about .logo, .page-container .about .logo {
     left: 0;
@@ -5281,7 +5281,7 @@ textarea.form-control {
   pointer-events: none; }
 
 .select:hover:before {
-  background: #00ffed;
+  background: #00D1D6;
   opacity: .3; }
 
 .select select {
@@ -5340,7 +5340,7 @@ textarea.form-control {
     .page-container .about, .page-container .design, .page-container .develop, .page-container .contact {
       padding: 1.5rem; }
     .page-container .about {
-      background: #00ffed;
+      background: #00D1D6;
       background: #34495e;
       font-size: 1.25rem;
       font-size: 2.8vw;
@@ -5348,13 +5348,13 @@ textarea.form-control {
       .page-container .about h3 {
         color: #fff; }
       .page-container .about a {
-        color: #00ffed; }
+        color: #00D1D6; }
     .page-container .work {
       background: #fff;
-      color: #00ffed;
+      color: #00D1D6;
       padding: 0; }
     .page-container .contact {
-      background: #00ffed;
+      background: #00D1D6;
       background: #34495e;
       color: #fff; }
       .page-container .contact .button {
@@ -5569,10 +5569,10 @@ textarea.form-control {
         color: #fff;
         font-size: 2.25rem; }
       .page-container .about a {
-        color: #00ffed; }
+        color: #00D1D6; }
     .page-container .work {
       background: #fff;
-      color: #00ffed; }
+      color: #00D1D6; }
       .page-container .work h3 {
         margin: 0; }
     .page-container .contact {
@@ -5629,9 +5629,9 @@ textarea.form-control {
         .page-container.js .work.design .outer, .page-container.js .work.develop .outer {
           width: 75%; }
         .page-container.js .work .design {
-          background: #00ffed;
-          background: linear-gradient(144deg, #47a3da, #00ffed 100%);
-          background: linear-gradient(175deg, #47a3da, #00ffed 100%); }
+          background: #00D1D6;
+          background: linear-gradient(144deg, #47a3da, #00D1D6 100%);
+          background: linear-gradient(175deg, #47a3da, #00D1D6 100%); }
           .page-container.js .work .design .js-link {
             color: #fff; }
       .page-container.js #work {

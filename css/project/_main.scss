@@ -42,3 +42,9 @@ textarea.form-control {
 .overlay { 
   position: fixed;width: 100%;height: 100%;display: block;background: transparent;z-index: -1;top: 0;left: 0;
 }
+
+
+.lightturquoiseOnWhite {
+    color: $lightturquoiseOnWhite;
+    fill: $lightturquoiseOnWhite_fill;
+}

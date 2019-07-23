@@ -223,15 +223,25 @@ $(document).ready(function(){
 			ncontact.get('pan').set({ direction: Hammer.DIRECTION_ALL });
 			ncontact.on("pandown", function(ev) {verticalScroll('work')});
 
-			$('body').append("<div class='mobile-only'><strong class='legend'>Click on the screen to proceed.</strong><div class='gesture-instruction'><div class='v-layout'></div><div class='h-layout'></div><div class='device'></div></div></div>");
+			if (localStorage.getItem("isNewSession")) {
+				// The user has been to this page before
+				
+			} else {
+				// First time on this page
+				localStorage.setItem('isNewSession', 'true');
 
-			$('.mobile-only').on('click', function(){
-				$(this).remove();
-			});
+				$('body').append("<div class='mobile-only'><strong class='legend'>Click on the screen to proceed.</strong><div class='gesture-instruction'><div class='v-layout'></div><div class='h-layout'></div><div class='device'></div></div></div>");
+				$('.mobile-only').on('click', function(){
+					$(this).remove();
+				});
+	
+			}
 		
     }	
 
 
 
-
 });
+
+
+
